@@ -68,4 +68,16 @@ They serve the same purpose as JavaScript functions, but work in isolation and r
  => Import Pkg?
  => Write Code for routing
  => Check Output 
+
+
+ What is Ref?
+ =>Ref is used to work also perform an action but get higher weight
+ When to use and when dont use
+ Example
+
+
+ What is Error Boundary?
+ Make user Component
+ Make ErrorBoundary Component
+ Write Code and test it
 */

@@ -112,12 +112,15 @@
 
 
 import React from 'react'
+import Refs from './Class/Refs'
 // import List from './Forms/List'
 // import Effect from './Hooks/Effect'
 // import State from './Hooks/State'
 // import Method from './Lifecycle/Method'
 // import Form from './Forms/Form'
-import Index from './Routing/Index'
+// import Index from './Routing/Index'
+// import {BrowserRouter} from 'react-router-dom'
+// import Api from './Class/Api/Api'
 
 function App() {
   return (
@@ -127,7 +130,11 @@ function App() {
       {/* <Effect/> */}
       {/* <Form/> */}
       {/* <List/> */}
+      {/* <BrowserRouter>
       <Index/>
+      </BrowserRouter> */}
+      {/* <Api/> */}
+      <Refs/> {/*Bootstrap Functionality Also Provide,*/}
     </div>
   )
 }
