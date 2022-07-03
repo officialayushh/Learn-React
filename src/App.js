@@ -112,7 +112,13 @@
 
 
 import React from 'react'
-import Refs from './Class/Refs'
+import Index from './Class/Loading/Index'
+// import Control from './Class/Components/Control'
+// import Uncontrol from './Class/Components/Uncontrol'
+// import Index from './Class/Error/Index'
+// import Refs from './Class/Refs'
+// import Pure from './Class/Topics/Pure'
+// import Memo from './Function/Hooks/Memo/Memo'
 // import List from './Forms/List'
 // import Effect from './Hooks/Effect'
 // import State from './Hooks/State'
@@ -134,7 +140,13 @@ function App() {
       <Index/>
       </BrowserRouter> */}
       {/* <Api/> */}
-      <Refs/> {/*Bootstrap Functionality Also Provide,*/}
+      {/* <Refs/> Bootstrap Functionality Also Provide, */}
+      {/* <Index/> */}
+      {/* <Pure/> */}
+      {/* <Memo/> */}
+      {/* <Uncontrol/> */}
+      {/* <Control/> */}
+      <Index/>
     </div>
   )
 }

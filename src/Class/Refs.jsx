@@ -40,7 +40,7 @@ export default class Refs extends Component {
   render() {
     return (
       <div>
-        <Button variant="primary" onClick={()=>this.handleModal()}>Click Me</Button>
+        <Button onClick={()=>this.handleModal()}>Click Me</Button>
         <Modal show={this.state.show} onHide={()=>this.handleModal()}>
             <Modal.Header closeButton>Modal Heading</Modal.Header>
             <Modal.Body>

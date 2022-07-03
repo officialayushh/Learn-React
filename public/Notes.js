@@ -80,4 +80,96 @@ They serve the same purpose as JavaScript functions, but work in isolation and r
  Make user Component
  Make ErrorBoundary Component
  Write Code and test it
+
+
+ ********SSR******** ?
+ => (SSR) is a popular technique for rendering a normally client-side app
+    on the server and then sending a fully rendered page to the client.
+
+    Benefits:-
+    -> One Major Benefit of using SSR is in having an app that can be crawled search engine which help for SEO.
+    -> SSR can also often help wit performance because a fully loaded app is sent down from the server on the first request.
+
+    Example:-
+    Create New App
+    Some change for SSR
+    => For placed of render in index.js use hydrate.
+    Install some npm package
+    => npm install express
+    => npm install @babel/register @babel/preset-env @babel/preset-react ignore-styles
+    Write some code fro server
+    => Make one Folder Server,
+    => Inside make two files index.js and server.js
+
+    ***********Server.js=>
+    import path from 'path'
+    import fs from 'fs'
+    import express from 'express'
+    import React from 'react'
+    import ReactDOMServer from 'react-dom/server'
+    import App from '..src/App'
+    const PORT = 6000
+    const app = express()
+    const router = express.Router()
+    const serverRenderer = (req,res,next) => {
+      fs.readFile(path.resolve('./build/index.html), 'utf-8', (err,data) => {
+        if(err) {
+          console.log(err)
+          return res.status(500).send('An error occured')
+        }
+        return res.send(
+          data.replace(
+            '<div id="root"></div>',
+            `<div id="root">${ReactDOMServer.renderToString(<App/>)}</div>`
+          )
+        )
+      })
+    }
+    router.use('^/$', serverRenderer)
+
+    router.use(
+      express.static(path.resolve(__dirname, '..', 'build'), {maxAge: '30d' })
+    )
+    app.use(router)
+
+    app.listen(PORT,() => {
+      console.log(`SSR running on Port ${PORT}`)
+    })
+
+    *************Index.js
+    require('ignore-styles')
+
+    require('@babel/register')({
+      ignore: [/(node_modules)/],
+      presets: ['@babel/preset-env', '@babel/preset-react']
+    })
+    require('./server')
+
+    Make Build Test Server Side Rendering
+    => npm run build
+    => node server /index.js
+
+
+    What is pure component
+    why use pure component
+    Example // Normal component use pure if state is same this will be used to good to use.
+    Test //Pure Component ke case m after upadate render again refresh call nahi hona chahiy,
+
+    What is Memo  //Memo used in Function Components
+    Make 2 components
+    Apply Memo
+    Test It
+
+    Test jwt with postman
+    Make Login Form with react
+    Call login Api
+    Handle jwt token
+    Call Other api with jwt Auth
+
+    What is uncontrolled Component ?
+    Make a Form
+    
+    Handle it with uncontrolled way ?
+    What is Controlled Component ?
+
 */
