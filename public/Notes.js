@@ -172,4 +172,9 @@ They serve the same purpose as JavaScript functions, but work in isolation and r
     Handle it with uncontrolled way ?
     What is Controlled Component ?
 
+    What is Hook?
+    What is custom Hook?
+    Make a title counter
+    convert it to the custom hook
+
 */

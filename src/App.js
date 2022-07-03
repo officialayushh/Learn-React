@@ -112,11 +112,14 @@
 
 
 import React from 'react'
-import Index from './Class/Loading/Index'
+import First from './Class/Prototype/First'
+import Files from './Class/Topics/Files'
+import Main from './Function/Hooks/Custom/Main'
+// import Index from './Class/Loading/Index'
 // import Control from './Class/Components/Control'
 // import Uncontrol from './Class/Components/Uncontrol'
 // import Index from './Class/Error/Index'
-// import Refs from './Class/Refs'
+// import Refs from './Class/Topics/Refs'
 // import Pure from './Class/Topics/Pure'
 // import Memo from './Function/Hooks/Memo/Memo'
 // import List from './Forms/List'
@@ -146,7 +149,10 @@ function App() {
       {/* <Memo/> */}
       {/* <Uncontrol/> */}
       {/* <Control/> */}
-      <Index/>
+      {/* <Index/> */}
+      {/* <Files/> */}
+      {/* <First/> */}
+      <Main/>
     </div>
   )
 }
